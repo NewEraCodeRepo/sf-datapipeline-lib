@@ -1,0 +1,76 @@
+{
+  "name": "datapipeline-lib",
+  "version": "1.0.29",
+  "description": "Library functions for accessing the datapipeline",
+  "main": "lib/index",
+  "typings": "types/index.d.ts",
+  "files": [
+    "types",
+    "examples",
+    "lib"
+  ],
+  "scripts": {
+    "test": "",
+    "prepare": "scripts/prepare.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SalesforceCloudServices/rbc-plan-and-arch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SalesforceCloudServices/rbc-plan-and-arch/issues"
+  },
+  "homepage": "https://github.com/SalesforceCloudServices/rbc-plan-and-arch#readme",
+  "dependencies": {
+    "@types/colors": "^1.2.1",
+    "@types/highland": "^1.0.0",
+    "@types/lodash": "^4.14.79",
+    "@types/mockdate": "^2.0.0",
+    "@types/node": "^8.4.0",
+    "@types/node-rdkafka": "1.0.4",
+    "@types/redis": "^2.8.0",
+    "canonical-json": "0.0.4",
+    "colors": "^1.2.5",
+    "csv-parse": "^2.0.0",
+    "datapipeline-schemas": "^0.0.25",
+    "fast-safe-stringify": "^2.0.4",
+    "highland": "^2.11.1",
+    "lodash": "^4.17.4",
+    "logform": "^1.6.0",
+    "mockdate": "^2.0.2",
+    "moment": "^2.22.1",
+    "node-rdkafka": "^2.3.2",
+    "redis": "^2.8.0",
+    "require-dir": "^0.3.2",
+    "triple-beam": "^1.2.0",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.5.3",
+    "winston": "^3.0.0-rc5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "gulp-install": "^1.1.0",
+    "gulp-mocha": "^4.3.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-tslint": "^8.1.2",
+    "gulp-typedoc": "^2.1.1",
+    "gulp-typescript": "^3.2.3",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "rbc-shared-tslint-rules": "^1.0.1",
+    "run-sequence": "^2.2.0",
+    "shoulda": "0.0.1",
+    "tslint": "^5.8.0",
+    "typedoc": "^0.9.0",
+    "typings": "^2.1.1"
+  }
+}

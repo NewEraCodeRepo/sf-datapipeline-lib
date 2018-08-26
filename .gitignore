@@ -1,0 +1,20 @@
+# Libraries
+node_modules/
+.idea/
+.vscode/
+
+# Build Folder
+build/
+
+# Library Folder
+lib/
+
+# Declarations Folder
+types/
+
+npm-debug.log
+
+.DS_Store
+
+.nvmrc
+.env

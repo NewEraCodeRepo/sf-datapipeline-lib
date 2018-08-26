@@ -1,0 +1,45 @@
+version: '3.3'
+services:
+  dev:
+    build: .
+    working_dir: /app
+    environment:
+      NODE_PATH: /app/node_modules
+    env_file:
+      - .env
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    command: ./scripts/dev-build.sh
+    ports:
+      - '5858:5858'
+  zookeeper:
+    image: 'wurstmeister/zookeeper'
+    volumes:
+      - /var/zookeeper
+  kafka:
+    image: 'wurstmeister/kafka:0.10.2.1'
+    environment:
+      KAFKA_ADVERTISED_HOST_NAME: kafka # Running single node kafka cluster for now
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'false'
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_PORT: 9092
+    ports:
+      - '9092:9092'
+      - '9999:9999'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/kafka
+  kafka_admin:
+    image: dbelwood/kafka-manager
+    environment:
+      ZK_HOSTS: zookeeper:2181
+      APPLICATION_SECRET: 'password'
+    ports:
+      - '9000:9000'
+  redis:
+    image: "redis"
+    ports:
+      - '6379:6379'
+    volumes:
+      - /var/redis

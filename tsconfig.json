@@ -1,0 +1,37 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "commonjs",
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "lib": [
+            "es2017",
+            "dom"
+        ],
+        "declaration": true,
+        "declarationDir": "./types",
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noFallthroughCasesInSwitch": true,
+        "outDir": "./lib",
+        "pretty": true,
+        "strictNullChecks": true,
+        "inlineSources": true,
+        "inlineSourceMap": true,
+        "target": "es2017",
+        "paths": {
+            "node-rdkafka": ["node_modules/@types/node-rdkafka"]
+        },
+        "typeRoots": ["./typings", "node_modules/@types"],
+        "rootDir": "src"
+    },
+    "exclude": [
+        "examples",
+        "node_modules",
+        "lib",
+        "build",
+        "types"
+    ]
+}
+
